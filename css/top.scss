@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+
+/* font
+================================= */
+$font_main: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+$font_sub: 'Roboto', sans-serif;
+
+
+/* color
+================================= */
+$color_main: #000000;
+$color_sub: #DDDDDD;
+$color_bg: #EDF1F2;
+$color_acc: #ff7700;
+$color_grad: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+$color_border: #ccc;
+
+$color_header: #fff;
+$color_footer: #f6f6f6;
+
+
+// =================================================
+//                  mv
+// =================================================
+#mv{
+    position: relative;
+
+    .mv_slider{
+        li img{
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .slick-slide .pc{
+            display: block !important;
+    
+            @media (max-width: 768px) {
+                display: none !important;
+            }
+        }
+    
+        .slick-slide .sp{
+            display: none !important;
+    
+            @media (max-width: 768px) {
+                display: block !important;
+            }
+        }
+    }
+
+    .mv_copy{
+        position: absolute;
+        top: 50vh;
+        right: 0;
+        left: 0;
+
+        h2{
+            font-size: clamp(4.4rem, 7.4vw, 8.6rem);
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p{
+            font-size: clamp(2.2rem, 2.4vw, 3.2rem);
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+}
